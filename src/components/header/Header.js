@@ -12,6 +12,7 @@ export class Header extends React.Component {
                     <ul className="nav navbar-nav">
                         <li><NavLink activeStyle={{fontWeight: "bold"}} activeClassName="active" exact to="/">Home</NavLink></li>
                         <li><NavLink activeStyle={{fontWeight: "bold"}} activeClassName="active" to="/view">View</NavLink></li>
+                        <li><NavLink activeStyle={{fontWeight: "bold"}} activeClassName="active" to="/create">Create</NavLink></li>
                         <li><NavLink activeStyle={{fontWeight: "bold"}} activeClassName="active" to="/edit">Edit</NavLink></li>
                         <li><NavLink activeStyle={{fontWeight: "bold"}} activeClassName="active" to="/delete">Delete Multiple</NavLink></li>
                     </ul>
