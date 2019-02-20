@@ -3,9 +3,9 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import { Header } from '../header/Header';
 import { Home } from '../home/Home';
-import { ViewUsers } from '../view/ViewUsers';
+import { ViewUsers } from '../view-users/ViewUsers';
 import { Edit } from '../edit/Edit';
-import { DeleteMultiple } from '../delete/DeleteMultiple';
+import { DeleteMultiple } from '../delete-multiple/DeleteMultiple';
 import { Create } from '../create/Create';
 
 class App extends Component {
