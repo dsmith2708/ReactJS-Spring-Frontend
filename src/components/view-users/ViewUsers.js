@@ -2,6 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 class ViewUsers extends React.Component {
+
+    componentDidMount() {
+        console.log('component did mount called');
+        this.props.getUsers();
+    }
+
     render() {
         console.log(this.props.users);
         return (
