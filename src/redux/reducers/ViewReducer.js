@@ -1,6 +1,6 @@
 
 
-export const viewReducer = (state, action) => {
+export const viewReducer = (state = {users: [{name: 'dantest'}]}, action) => {
     switch(action.type) {
         case "Get Users":
             break;

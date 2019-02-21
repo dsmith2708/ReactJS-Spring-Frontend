@@ -1,6 +1,6 @@
 
 
-export const deleteReducer = (state, action) => {
+export const deleteReducer = (state = {usersToDelete: []}, action) => {
     switch(action.type) {
         case "Select User":
             break;

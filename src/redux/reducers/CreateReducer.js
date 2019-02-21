@@ -1,6 +1,6 @@
 
 
-export const createReducer = (state, action) => {
+export const createReducer = (state = {newUser: {}}, action) => {
     switch(action.type) {
         case "Post New User":
             break;
