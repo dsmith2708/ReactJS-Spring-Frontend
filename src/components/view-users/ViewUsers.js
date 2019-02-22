@@ -1,15 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { ViewActions } from '../../redux/actions/ViewActions';
 
 class ViewUsers extends React.Component {
 
     componentDidMount() {
-        console.log('component did mount called');
         this.props.getUsers();
     }
 
     render() {
-        console.log(this.props.users);
         return (
             <div>
                 <h1>ViewUsers Works {this.props.users[0].name}</h1>
@@ -27,10 +26,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         getUsers: () => {
-            dispatch({
-                type: "Get Users",
-                payload: {}
-            });
+            dispatch(ViewActions.getUsersAction());
         }
     };
 }
