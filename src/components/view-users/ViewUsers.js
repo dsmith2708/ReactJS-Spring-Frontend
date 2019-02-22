@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { ViewActions } from '../../redux/actions/ViewActions';
+import { UserPanel } from './UserPanel';
 
 class ViewUsers extends React.Component {
 
@@ -12,8 +13,20 @@ class ViewUsers extends React.Component {
         return (
             <div>
                 <h1>ViewUsers Works {this.props.users[0].name}</h1>
+
+                <div className="row">
+                    {this.createUserPanels()}
+                </div>
             </div>
         )
+    }
+
+    createUserPanels() {
+        var userPanels = [];
+        this.props.users.map((newUser) => {
+            userPanels.push(<UserPanel user={newUser} />)
+        })
+        return userPanels;
     }
 }
 
