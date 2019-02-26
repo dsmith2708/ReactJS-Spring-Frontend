@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { createLogger} from 'redux-logger'
+import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk';
 
 import { createReducer } from '../reducers/CreateReducer';
@@ -11,4 +11,6 @@ const logger = createLogger({
 
 });
 
-export const store = createStore(combineReducers({createReducer, deleteReducer, editReducer, viewReducer}),{}, applyMiddleware(logger, thunk));
+export const store = createStore(combineReducers({ createReducer, deleteReducer, editReducer, viewReducer }),
+    {},
+    applyMiddleware(logger, thunk));

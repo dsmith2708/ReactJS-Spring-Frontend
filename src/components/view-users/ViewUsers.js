@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import { ViewActions } from '../../redux/actions/ViewActions';
 import { UserPanel } from './UserPanel';
 
+import './view-users.css';
+
 class ViewUsers extends React.Component {
 
     componentDidMount() {

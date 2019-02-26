@@ -3,7 +3,6 @@
 export const viewReducer = (state = { users: [{ name: 'dantest' }] }, action) => {
     switch (action.type) {
         case "Get Users":
-            console.log('get user code hit');
             var newState = {
                 ...state,
                 users: action.payload
