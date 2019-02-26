@@ -24,7 +24,8 @@ class ViewUsers extends React.Component {
     createUserPanels() {
         var userPanels = [];
         this.props.users.map((newUser) => {
-            userPanels.push(<UserPanel user={newUser} />)
+            userPanels.push(<UserPanel user={newUser} />);
+            return true;
         })
         return userPanels;
     }

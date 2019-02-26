@@ -1,0 +1,16 @@
+.user-panel {
+    margin-top: 15px;
+}
+
+.user-panel-text {
+    margin-top: 15px;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.user-panel-internal {
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: rgb(172, 172, 172);
+}
