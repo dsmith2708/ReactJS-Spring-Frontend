@@ -27,9 +27,7 @@ class Create extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return {
-        users: state.viewReducer.users
-    }
+    return {}
 };
 
 const mapDispatchToProps = (dispatch) => {
