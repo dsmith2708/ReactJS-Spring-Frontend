@@ -1,6 +1,6 @@
 
 export class CreateActions {
-    static getUsersAction(name, age) {
+    static postUserAction(name, age) {
         return {
             type: "Post New User",
             payload: {

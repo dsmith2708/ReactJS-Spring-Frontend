@@ -6,7 +6,7 @@ import { Home } from '../home/Home';
 import ViewUsers from '../view-users/ViewUsers';
 import { Edit } from '../edit/Edit';
 import { DeleteMultiple } from '../delete-multiple/DeleteMultiple';
-import { Create } from '../create/Create';
+import Create from '../create/Create';
 
 class App extends Component {
   render() {
