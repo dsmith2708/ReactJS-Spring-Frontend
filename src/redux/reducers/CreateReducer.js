@@ -7,8 +7,8 @@ export const createReducer = (state = { newUser: {} }, action) => {
             fetch(AppConfig.apiUrl, {
                 method: 'POST',
                 body: JSON.stringify({
-                    name: 'john doe',
-                    age: 56
+                    name: action.payload.name,
+                    age: action.payload.age
                 }),
                 headers: {
                     "Content-Type": "application/json"
