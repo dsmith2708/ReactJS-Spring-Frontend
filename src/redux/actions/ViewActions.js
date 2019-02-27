@@ -1,9 +1,9 @@
-
+import { AppConfig } from '../../helpers/config';
 
 export class ViewActions {
     static getUsersAction() {
         return dispatch => {
-            fetch('http://localhost:3301/users')
+            fetch(AppConfig.apiUrl)
                 .then(response => response.json())
                 .then(data => dispatch({
                     type: "Get Users",
