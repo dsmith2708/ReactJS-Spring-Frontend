@@ -3,7 +3,20 @@ import React from 'react';
 export class Edit extends React.Component {
     render() {
         return (
-            <h1>Edit works!</h1>
+            <div>
+                <h1>Edit works!</h1>
+                <div className="form-group">
+                    <label htmlFor="nameInput">Name:</label>
+                    <input type="text" className="form-control" id="nameInput"
+                        placeholder="Enter name" onChange={(event) => this.setNameValue(event)} />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="ageInput">Age:</label>
+                    <input type="number" className="form-control" id="ageInput"
+                        placeholder="Enter Age" onChange={(event) => this.setAgeValue(event)} />
+                </div>
+                <button onClick={() => this.onSubmit()} className="btn btn-primary">Update User</button>
+            </div>
         )
     }
 }
