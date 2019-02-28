@@ -8,7 +8,6 @@ class Create extends React.Component {
     userAge = 0;
 
     onSubmit() {
-        console.log('name:', this.userName, 'age:', this.userAge);
         this.props.postUser(this.userName, this.userAge);
     }
 
