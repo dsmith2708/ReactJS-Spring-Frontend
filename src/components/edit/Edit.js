@@ -1,7 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { EditActions } from '../../redux/actions/EditActions';
 
 class Edit extends React.Component {
+
+    componentDidMount() {
+        console.log('props userID: ', this.props.userIDToEdit);
+        this.props.getUserToEdit(this.props.userIDToEdit);
+    }
+
     render() {
         return (
             <div>
@@ -24,11 +31,15 @@ class Edit extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
+        userIDToEdit: state.viewReducer.userToEditWhenNav
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        getUserToEdit: (id) => {
+            dispatch(EditActions.getUserToEdit(id));
+        }
     };
 }
 
