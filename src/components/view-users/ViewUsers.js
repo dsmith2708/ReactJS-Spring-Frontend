@@ -26,10 +26,14 @@ class ViewUsers extends React.Component {
     createUserPanels() {
         var userPanels = [];
         this.props.users.map((newUser) => {
-            userPanels.push(<UserPanel key={newUser.id} user={newUser} />);
+            userPanels.push(<UserPanel whenClicked={() => this.navToEdit(newUser.id)} key={newUser.id} user={newUser} />);
             return true;
         })
         return userPanels;
+    }
+
+    navToEdit(id) {
+        console.log('nav to edit id: ', id);
     }
 }
 
