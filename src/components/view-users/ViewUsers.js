@@ -35,6 +35,7 @@ class ViewUsers extends React.Component {
     navToEdit(id) {
         console.log('nav to edit id: ', id);
         this.props.navToEdit(id);
+        this.props.history.push('/edit')
     }
 }
 
