@@ -1,6 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-export class Edit extends React.Component {
+class Edit extends React.Component {
     render() {
         return (
             <div>
@@ -20,3 +21,15 @@ export class Edit extends React.Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+    };
+}
+
+ export default connect(mapStateToProps, mapDispatchToProps)(Edit);
