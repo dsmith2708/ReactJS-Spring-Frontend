@@ -16,12 +16,12 @@ class Edit extends React.Component {
                 <div className="form-group">
                     <label htmlFor="nameInput">Name:</label>
                     <input type="text" className="form-control" id="nameInput"
-                        placeholder="Enter name" onChange={(event) => this.setNameValue(event)} />
+                        placeholder="Enter name" value={this.props.userToEdit.name} onChange={(event) => this.setNameValue(event)} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="ageInput">Age:</label>
                     <input type="number" className="form-control" id="ageInput"
-                        placeholder="Enter Age" onChange={(event) => this.setAgeValue(event)} />
+                        placeholder="Enter Age" value={this.props.userToEdit.age} onChange={(event) => this.setAgeValue(event)} />
                 </div>
                 <button onClick={() => this.onSubmit()} className="btn btn-primary">Update User</button>
             </div>
@@ -31,7 +31,8 @@ class Edit extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        userIDToEdit: state.viewReducer.userToEditWhenNav
+        userIDToEdit: state.viewReducer.userToEditWhenNav,
+        userToEdit: state.editReducer.userToEdit
     }
 };
 
