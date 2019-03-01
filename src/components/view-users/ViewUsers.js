@@ -34,6 +34,7 @@ class ViewUsers extends React.Component {
 
     navToEdit(id) {
         console.log('nav to edit id: ', id);
+        this.props.navToEdit(id);
     }
 }
 
@@ -47,6 +48,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getUsers: () => {
             dispatch(ViewActions.getUsersAction());
+        },
+        navToEdit: (id) => {
+            dispatch(ViewActions.navToEditAction(id));
         }
     };
 }
