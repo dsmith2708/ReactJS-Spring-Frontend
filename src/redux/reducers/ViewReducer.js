@@ -1,15 +1,27 @@
 
 
-export const viewReducer = (state = { users: [{ name: 'dantest' }] }, action) => {
+export const viewReducer = (
+    state = {
+        users: [
+            { name: 'dantest' }
+        ],
+        userToEditWhenNav: 0
+    },
+    action) => {
     switch (action.type) {
         case "Get Users":
-            var newState = {
+            var newGetUsersState = {
                 ...state,
                 users: action.payload
             }
-            return newState;
+            return newGetUsersState;
         case "Navigate to Edit":
-            break;
+            console.log('nav to edit action called with id: ', action.payload);
+            var newNavState = {
+                ...state,
+                userToEditWhenNav: action.payload
+            };
+            return newNavState;
         default:
             break;
     }

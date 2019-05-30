@@ -4,7 +4,7 @@ import './App.css';
 import { Header } from '../header/Header';
 import { Home } from '../home/Home';
 import ViewUsers from '../view-users/ViewUsers';
-import { Edit } from '../edit/Edit';
+import Edit from '../edit/Edit';
 import { DeleteMultiple } from '../delete-multiple/DeleteMultiple';
 import Create from '../create/Create';
 

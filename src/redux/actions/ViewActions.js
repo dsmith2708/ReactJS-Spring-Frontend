@@ -11,4 +11,11 @@ export class ViewActions {
                 }));
         }
     };
+
+    static navToEditAction(idToEdit) {
+        return {
+            type: "Navigate to Edit",
+            payload: idToEdit
+        }
+    }
 }
